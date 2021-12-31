@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html class='v2' dir='ltr' lang='vi' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+    <head>
+        <title>Been Together</title>
+		<link href="./css/style.css" rel="stylesheet" type="text/css">
+<meta content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' name='viewport'/>
+<link href='https://i.imgur.com/A2jdtdQ.png' rel='shortcut icon' type='image/x-icon'/>
+<meta content='Phát triển bởi Nguyễn Lê Hoàng!' name='description'/>
+<meta content='Phát triển bởi Nguyễn Lê Hoàng!' property='og:description'/>
+<meta content='Phát triển bởi Nguyễn Lê Hoàng!' name='twitter:description'/>
+<meta content='template đếm ngày yêu' name='keywords'/>
+<meta content='Been Together' property='og:title'/>
+<meta content='https://i.imgur.com/HZhDAMI.jpg' property='og:image'/>
+<meta content='https://codeprof5.blogspot.com/' property='og:url'/>
+<meta content='website' property='og:type'/>
+<meta content='Been Together' property='og:image:alt'/>
+<link href='https://fonts.googleapis.com/css?family=Dancing+Script|Lobster|Pattaya|Srisakdi&display=swap' rel='stylesheet'/>
+<!-- Bắt đầu css-->
+<style id='page-skin-1' type='text/css'><!--
+/* Chèn CSS vào đây */
+/*----------------------------------*/
+/* Name: Template Together 2.0      */
+/* Admin: Minh Tiến                */
+
+/*----------------------------------*/
+
+--></style>
+    </head>
+    <!-- Bắt đầu phần hiển thị -->
+    <body>
+        <h1 class='title'><a class='active'>Đếm Ngày Cô Đơn</a></h1>
+<div class='box'>
+<div class='about'>
+<div class='info'>
+<img class='avatar' src='./image/Nu.jpg'/>
+<div class='details'>
+<p class='name' style='font-family: &#39;Lobster&#39;, cursive;'>Người Ấy Là Ai</p>
+<p class='born'>?</p>
+</div>
+</div>
+<div class='heart-box'>
+<img class='heart' src='./image/head.png'/>
+</div>
+<div class='info'>
+<img class='avatar' src='./image/Nam.jpg'/>
+<div class='details'>
+<p class='name' style='font-family: &#39;Lobster&#39;, cursive;'>Minh Tiến</p>
+<p class='born'>21.04.1998</p>
+</div>
+</div>
+</div>
+<div class='time'>
+<a class='active'>
+<h2 class='days'><date>0 DAYS</date></h2>
+</a>
+<br/>
+<p class='sup-time'>
+<time>00:00:00</time>
+</p>
+</div>
+<div id='music'>
+<audio autoplay='' controls='' loop=''>Your browser does not support the audio element.</audio>
+</div>
+<p class='say-thank'>Thank you for your love !</p>
+</div>
+<script type='text/javascript'>//<![CDATA[
+            // Thay đổi ngày bắt đầu đếm tại đây - cấu trúc => YYYY/MM/DD
+            const yourDate = new Date("1998-04-21T00:00:00"),
+            // Thay đổi bài hát tại đây
+            music = ['ido', 'noinaycoanh', 'nguoiamphu'];
+            document.addEventListener('DOMContentLoaded', function() {
+                var rootTime = document.querySelector("time");
+                document.querySelector("date").textContent = Math.floor(Math.floor((new Date() - yourDate) / 1000) / 60 / 60 / 24) + " DAYS";
+                function olock() {
+                    var today = new Date(),
+                        hrs = (Math.floor(Math.floor((today - yourDate) / 1000) / 60 / 60)) % 24,
+                        min = (Math.floor(Math.floor((today - yourDate) / 1000) / 60)) % 60,
+                        sec = Math.floor((today - yourDate) / 1000) % 60;
+                    rootTime.textContent = `${(hrs>9)?hrs:"0"+hrs}:${(min>9)?min:"0"+min}:${(sec>9)?sec:"0"+sec}`;
+                }
+                olock();
+                var timer = setInterval(function() {
+                    olock()
+                }, 1000);
+                // Thay đổi link ramdom bài hát tại đây
+                document.querySelector("audio").setAttribute("src", `https://cdn.leanhduc.pro.vn/music/${music[Math.floor(Math.random()*music.length)]}.mp3` , 'autoplay');
+            }, false);
+        //]]></script>
+<!-- loading -->
+<div id='loader'>
+<div class='spinner'>
+<div class='spinner-inner'></div>
+</div>
+</div>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'></script>
+<script type='text/javascript'>
+            $(window).load(function () {
+                setTimeout(function () {
+                    $(".spinner").fadeOut("slow");
+                        setTimeout(function () {
+                            $("#loader").fadeOut("slow")
+                    }, 700)
+                }, 700)
+            });
+        </script>
+<!-- end loading -->
+
+
+    </body>
+    <!-- Kết thúc phần hiển thị -->
+</html>
